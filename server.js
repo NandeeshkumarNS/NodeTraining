@@ -1,8 +1,9 @@
 const express = require('express');
+require("dotenv").config();
 const app = express();
 const port = process.env.port;
 const mongoose = require("mongoose")
-require("dotenv").config();
+
 const URL = process.env.mongoUrl
 
 const transcModel = require("./models/transction")
