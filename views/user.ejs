@@ -1,0 +1,29 @@
+
+<table border="1">
+    <tr>
+        <th>Photo</th>
+        <th>First Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+    </tr>
+       
+        <% for (const user of userList) { %>  
+            <tr>
+            <td><h1><img src=<%= user.picture.thumbnail %> </h1></td>   
+            <td><h1> <%= user.name.first %></h1></td> 
+            <td><p><%= user.gender %></p></td> 
+            <td><p><%= user.dob.age %></p></td> 
+        </tr>
+             <%
+             } %>
+
+             <tr>
+                <td></td>
+                 <td>Average Age</td>
+                 <td></td>
+                 <td><%= userList.reduce((sum,user) => sum +user.dob.age,0)/userList.length %></td>
+                
+            </tr>
+
+</table>
+
